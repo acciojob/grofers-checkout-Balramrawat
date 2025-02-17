@@ -14,8 +14,9 @@ const getSum = () => {
                 let table = document.querySelector("table");
                 let tRow = document.createElement("tr");
                 let tCell = document.createElement("td");
-                // totalCell.colspan = "1";
-				tcell.setAttribute("id","ans")
+                
+				tCell.setAttribute("id","ans")
+				// totalCell.colspan = "2";
                 tCell.textContent = "Total Price: Rs " + total;
                 
                 tRow.appendChild(tCell);
