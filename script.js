@@ -1,6 +1,6 @@
-const getSumBtn = document.createElement("button");
-getSumBtn.append("Get Total Price");
-document.body.appendChild(getSumBtn);
+const Btn = document.createElement("button");
+Btn.append("Get Total Price");
+document.body.appendChild(Btn);
 
 const getSum = () => {
 
@@ -8,19 +8,19 @@ const getSum = () => {
                 let total = 0;
                 
                 prices.forEach(price => {
-                    total += parseFloat(price.textContent) || 0;
+                    total += parseFloat(price.textContent);
                 });
                 
                 let table = document.querySelector("table");
-                let totalRow = document.createElement("tr");
-                let totalCell = document.createElement("td");
+                let tRow = document.createElement("tr");
+                let tCell = document.createElement("td");
                 // totalCell.colspan = "1";
-                totalCell.textContent = "Total Price: Rs " + total;
+                tCell.textContent = "Total Price: Rs " + total;
                 
-                totalRow.appendChild(totalCell);
-                table.appendChild(totalRow);
+                tRow.appendChild(tCell);
+                table.appendChild(tRow);
   
 };
 
-getSumBtn.addEventListener("click", getSum);
+Btn.addEventListener("click", getSum);
 
